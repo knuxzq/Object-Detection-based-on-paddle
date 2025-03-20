@@ -31,12 +31,19 @@ envs: Python 3.8 ~ 3.10
 
 `
 from paddlex import create_pipeline
+
 pipeline = create_pipeline(pipeline="small_object_detection")
+
 output = pipeline.predict("the input image's path or url")
+
 for res in output:
+
     res.print() 
+    
     res.save_to_img("the output path") 
+    
     res.save_to_json("the output path") 
+    
 `
 
 # The result based on Paddle:
