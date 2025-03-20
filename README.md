@@ -3,12 +3,12 @@ The tutorial for object detection based on PaddlePaddle.
 
 envs: Python 3.8 ~ 3.10
 
-#1. open the Anaconda PowerShell Prompt
+# 1. open the Anaconda PowerShell Prompt
 
    `conda create -n test python=3.10`
    `conda activate test`
 
-#2. Paddle install
+# 2. Paddle install
 
 # cpu
 `python -m pip install paddlepaddle==3.0.0b1 -i https://www.paddlepaddle.org.cn/packages/stable/cpu/`
@@ -27,7 +27,8 @@ envs: Python 3.8 ~ 3.10
 
    `paddlex --pipeline object_detection --input https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/general_object_detection_002.png --device gpu:0`
 
-#run the code in Pycharm
+# run the code in Pycharm
+
 `
 from paddlex import create_pipeline
 pipeline = create_pipeline(pipeline="small_object_detection")
@@ -38,7 +39,7 @@ for res in output:
     res.save_to_json("the output path") 
 `
 
-#The result based on Paddle:
+# The result based on Paddle:
 
 ![images](https://github.com/user-attachments/assets/d08ccb2d-7aca-467a-ac9a-2a0d18e32442)
 
